@@ -1,4 +1,14 @@
+/* .App {
+  margin-top: 50px;
+} */
+
 .main {
   display: flex;
   justify-content: space-around;
+  gap: 10px;
+}
+
+h1 {
+  text-align: center;
+  position: sticky;
 }

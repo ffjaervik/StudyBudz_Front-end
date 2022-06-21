@@ -1,21 +1,37 @@
-import "./lesson-card.css"
+import './lesson-card.css';
 
-const LessonCard = ({lesson}) => {
-    return ( 
-        <div className="single-lesson">
-            <h2>{lesson.topic}</h2>
-            <p> {lesson.fullName}</p>
-            <p> {lesson.describe}</p>
-            <p> {lesson.sessionTime}</p>
-            <p> {lesson.meetingLength}</p>
-            <p> {lesson.meetingLink}</p>
-            
+const LessonCard = ({ lesson }) => {
+  return (
+    <div className="single-lesson">
+      <div className="card-hero">
+        <h2>
+          Topic: <span>{lesson.topic}</span>
+        </h2>
+        <hr />
+      </div>
+      <div className="card-stuff">
+        <p>
+          <strong>Name: </strong> {lesson.fullName}
+        </p>
+        <p>
+          <strong>About me: </strong>
+          {lesson.describe}
+        </p>
+        <p>
+          <strong>Session date and time: </strong>
+          {lesson.sessionTime}
+        </p>
+        <p>
+          <strong>Session length: </strong>
+          {lesson.meetingLength}
+        </p>
+        <p>
+          <strong>Meeting link: </strong>
+          {lesson.meetingLink}
+        </p>
+      </div>
+    </div>
+  );
+};
 
-        </div>
-
-     );
-}
-
-
- 
 export default LessonCard;

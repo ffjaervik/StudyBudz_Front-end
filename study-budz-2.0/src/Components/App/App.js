@@ -30,7 +30,7 @@ function App() {
   }, []); //The submit button state will have to go inside the dep. array
 
   return (
-    <>
+    <div>
       <Navbar />
       <div className="App">
         <h1>StudyBudz</h1>
@@ -39,7 +39,7 @@ function App() {
           <Form />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

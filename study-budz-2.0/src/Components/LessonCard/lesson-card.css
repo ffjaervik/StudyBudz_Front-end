@@ -1,8 +1,33 @@
 div .single-lesson {
-  border: 1px solid black;
+  border: 2px solid #00243d;
   border-radius: 17px;
 
   max-width: 30%;
   min-width: 40%;
-  text-align: center;
+
+  padding: 1.5rem;
+}
+
+.single-lesson p {
+  font-size: 1.1rem;
+}
+
+hr {
+  height: 4px;
+  background-color: #00243d;
+}
+
+/* .card-hero {
+  background-color: lightblue;
+} */
+
+/* #1977f2;
+#e9676c */
+/* #00243D */
+
+span {
+  font-weight: normal;
+}
+strong {
+  color: #00243d;
 }
