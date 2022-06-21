@@ -11,7 +11,7 @@ function App() {
 
   //Hook that fetches data for the initail render
   useEffect(() => {
-    const url = `https://pokeapi.co/api/v2/pokemon/ditto`;
+    const url = `http://localhost:8000/Lesson`;
 
     const fetchData = async () => {
       try {
