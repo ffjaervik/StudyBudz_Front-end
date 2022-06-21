@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Form from '../Form/index';
+import LessonCard from '../LessonCard';
+import LessonContainer from '../LessonContainer';
 
 function App() {
+  //Main data that comes from the db + initial render
   const [initialData, setInitialData] = useState(null);
 
+  //Hook that fetches data for the initail render
   useEffect(() => {
     const url = `http://localhost:8000/Lesson`;
 
@@ -22,14 +26,15 @@ function App() {
     };
 
     fetchData();
-  }, []);
+  }, []); //The submit button state will have to go inside the dep. array
 
   return (
     <div className="App">
-      <h1>Test</h1>
-      {initialData && <h2>{initialData[0].fullName} </h2>}
-      {/* {initialData && <h2>{initialData[2].fullName} </h2>} */}
-      <Form />
+      <h1>StudyBudz</h1>
+      <div className="main">
+        {initialData && <LessonContainer lessons={initialData}/>}
+        <Form />
+      </div>
     </div>
   );
 }

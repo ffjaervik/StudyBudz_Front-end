@@ -18,22 +18,23 @@ function Form() {
       sessionTime,
       meetingLength,
     };
+    console.log(studySession)
 
-    const post = await fetch('https://caz1.herokuapp.com/users', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        fname: 'fname',
-        lname: 'lname',
-        email: 'email',
-        githubuser: 'ghub',
-        password: 'password',
-        location: 'location',
-        intrests: 'interest',
-      }),
-    });
-    const data = await post.json();
-    console.log(data);
+    // const post = await fetch('https://caz1.herokuapp.com/users', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({
+    //     fname: 'fname',
+    //     lname: 'lname',
+    //     email: 'email',
+    //     githubuser: 'ghub',
+    //     password: 'password',
+    //     location: 'location',
+    //     intrests: 'interest',
+    //   }),
+    // });
+    // const data = await post.json();
+    // console.log(data);
 
     setFullName('');
     setTopic('');
@@ -54,7 +55,6 @@ function Form() {
 
   return (
     <div>
-      <h4>Offer study Session</h4>
       <form className="form-container">
         <label>Full Name</label>
         <input
@@ -105,12 +105,12 @@ function Form() {
         <button onClick={submitForm}>Submit</button>
         <button onClick={clearForm}>Clear</button>
       </form>
-      <p>{sessionTime}</p>
+      {/* <p>{sessionTime}</p>
       <p>{fullName}</p>
       <p>{topic}</p>
       <p>{describe}</p>
       <p>{meetingLink}</p>
-      <p>{meetingLength}</p>
+      <p>{meetingLength}</p> */}
     </div>
   );
 }

@@ -1,0 +1,10 @@
+div .single-lesson {
+    border: 1px solid black ;
+    border-radius: 17px;
+   
+    max-width: 33vw;
+    min-width: 23vw;
+    text-align: center;
+    
+
+}

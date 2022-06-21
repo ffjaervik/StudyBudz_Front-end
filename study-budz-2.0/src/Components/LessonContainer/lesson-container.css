@@ -1,0 +1,14 @@
+div .lesson-container {
+    border: 4px solid rgb(234, 48, 48);
+    display: grid;
+    
+
+
+
+}
+
+/* display: flex;
+justify-content: space-evenly ;
+flex-wrap:wrap;
+gap:80px;
+flex-grow: 1; */
