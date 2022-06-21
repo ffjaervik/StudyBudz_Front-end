@@ -1,5 +1,14 @@
 .form-container {
-  max-width: 30vw;
+  min-width: 30vw;
+  border: 1px solid blue;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-items-container {
+  max-width: 20vw;
   display: flex;
   flex-direction: column;
   margin-left: 20px;

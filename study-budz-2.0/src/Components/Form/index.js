@@ -18,7 +18,7 @@ function Form() {
       sessionTime,
       meetingLength,
     };
-    console.log(studySession)
+    console.log(studySession);
 
     // const post = await fetch('https://caz1.herokuapp.com/users', {
     //   method: 'POST',
@@ -54,8 +54,8 @@ function Form() {
   }
 
   return (
-    <div>
-      <form className="form-container">
+    <div className="form-container">
+      <form className="form-items-container">
         <label>Full Name</label>
         <input
           type="text"

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Form from '../Form/index';
-import LessonCard from '../LessonCard';
+// import LessonCard from '../LessonCard';
 import LessonContainer from '../LessonContainer';
+import Navbar from '../NavBar/index.js';
 
 function App() {
   //Main data that comes from the db + initial render
@@ -10,7 +11,7 @@ function App() {
 
   //Hook that fetches data for the initail render
   useEffect(() => {
-    const url = `http://localhost:8000/Lesson`;
+    const url = `https://pokeapi.co/api/v2/pokemon/ditto`;
 
     const fetchData = async () => {
       try {
@@ -29,13 +30,16 @@ function App() {
   }, []); //The submit button state will have to go inside the dep. array
 
   return (
-    <div className="App">
-      <h1>StudyBudz</h1>
-      <div className="main">
-        {initialData && <LessonContainer lessons={initialData}/>}
-        <Form />
+    <>
+      <Navbar />
+      <div className="App">
+        <h1>StudyBudz</h1>
+        <div className="main">
+          {initialData && <LessonContainer lessons={initialData} />}
+          <Form />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
