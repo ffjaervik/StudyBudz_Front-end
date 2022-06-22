@@ -34,7 +34,7 @@ function Form() {
 
     console.log(studySession);
 
-    const post = await fetch('http://localhost:4000/lessons', {
+    const post = await fetch('https://studybudzapp.herokuapp.com/lessons', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(studySession),
@@ -50,6 +50,7 @@ function Form() {
   return (
     <div className="form-container">
       <form className="form-items-container">
+        <h2>Offer a Study Session</h2>
         <label>Full Name</label>
         <input
           type="text"

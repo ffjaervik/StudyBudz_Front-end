@@ -1,20 +1,17 @@
-import LessonCard from "../LessonCard";
-import "./lesson-container.css";
+import LessonCard from '../LessonCard';
+import './lesson-container.css';
 
-const LessonContainer = ({lessons}) => {
+const LessonContainer = ({ lessons }) => {
+  return (
+    <div>
+      <h2 className="card-section-title">Choose a lesson to take part in:</h2>
+      <div className="lesson-container">
+        {lessons.map((lesson) => (
+          <LessonCard lesson={lesson} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-
-    return ( 
-        <div className="lesson-container">
-            {lessons.map((lesson) => (
-                
-                 <LessonCard lesson={lesson}/>                   
-             
-            ) )}
-        </div>
-
-    
-     );
-}
- 
 export default LessonContainer;

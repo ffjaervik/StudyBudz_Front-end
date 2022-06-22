@@ -1,13 +1,15 @@
 div .single-lesson {
   border: 2px solid #00243d;
-  border-radius: 17px;
-
+  border-radius: 10px;
+  /* color: white; */
   max-width: 30%;
   min-width: 40%;
 
   padding: 1.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: lightblue;
+  background-color: #1d3557;
+  background-color: #457b9d;
+  background-color: #f1faee;
 }
 
 .single-lesson p {
@@ -17,12 +19,13 @@ div .single-lesson {
   transform: scale(1.1);
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
   z-index: 3;
-  border-color: #007bff !important;
+  transition-duration: 500ms;
+  transition-property: transform;
 }
 
 hr {
   height: 4px;
-  background-color: #00243d;
+  background-color: #e63946;
 }
 
 /* .card-hero {
@@ -39,4 +42,30 @@ span {
 }
 strong {
   color: #00243d;
+}
+.card-hero h2 {
+  text-align: center;
+}
+
+.card-section-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.attending-box {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+.attending-box input {
+  width: 50%;
+  border: 1px solid #eb1d2e;
+}
+.attending-box button {
+  padding: 10px 5px;
+  background-color: #eb1d2e;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
 }
