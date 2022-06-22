@@ -128,7 +128,9 @@ function Form() {
         <button className="submit" onClick={submitForm}>
           Submit
         </button>
-        <button onClick={clearForm}>Clear</button>
+        <button className="clear" onClick={clearForm}>
+          Clear
+        </button>
       </form>
       {/* <p>{sessionTime}</p>
       <p>{fullName}</p>
