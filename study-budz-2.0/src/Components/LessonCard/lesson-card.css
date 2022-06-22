@@ -63,7 +63,8 @@ strong {
   border: 1px solid #eb1d2e;
 }
 .attending-box button {
-  padding: 10px 5px;
+  width: 45%;
+  padding: 12px 5px;
   background-color: #eb1d2e;
   border: none;
   color: white;
