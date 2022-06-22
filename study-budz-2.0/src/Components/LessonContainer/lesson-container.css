@@ -1,5 +1,5 @@
 div .lesson-container {
-  /* border: 4px solid rgb(234, 48, 48); */
+  /* border-right: 10px solid rgb(234, 48, 48); */
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;

@@ -11,6 +11,9 @@ div .single-lesson {
 .single-lesson p {
   font-size: 1.1rem;
 }
+.single-lesson {
+  background-color: lightblue;
+}
 
 hr {
   height: 4px;
@@ -19,6 +22,7 @@ hr {
 
 /* .card-hero {
   background-color: lightblue;
+  width: 100%;
 } */
 
 /* #1977f2;

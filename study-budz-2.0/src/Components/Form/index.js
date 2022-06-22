@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Form.css';
+
 function Form() {
   const [fullName, setFullName] = useState('');
   const [topic, setTopic] = useState('');
@@ -7,6 +8,15 @@ function Form() {
   const [meetingLink, setMeetingLink] = useState('');
   const [meetingLength, setMeetingLength] = useState('');
   const [sessionTime, setSessionTime] = useState('');
+  const [paypalLink, setPaypalLink] = useState('');
+
+  // fname: 'fname',
+  // lname: 'lname',
+  // email: 'email',
+  // githubuser: 'ghub',
+  // password: 'password',
+  // location: 'location',
+  // intrests: 'interest',
 
   async function submitForm(e) {
     e.preventDefault();
@@ -17,24 +27,25 @@ function Form() {
       meetingLink,
       sessionTime,
       meetingLength,
+      paypalLink,
     };
     console.log(studySession);
 
-    // const post = await fetch('https://caz1.herokuapp.com/users', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({
-    //     fname: 'fname',
-    //     lname: 'lname',
-    //     email: 'email',
-    //     githubuser: 'ghub',
-    //     password: 'password',
-    //     location: 'location',
-    //     intrests: 'interest',
-    //   }),
-    // });
-    // const data = await post.json();
-    // console.log(data);
+    const post = await fetch('https://studybudzapp.herokuapp.com/lessons', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: 'fullName',
+        topic: 'topic',
+        description: 'describe',
+        zoom: 'meetingLink',
+        paypalemail: 'paypalLink',
+        datetime: 'sessionTime',
+        duration: 'meetingLength',
+      }),
+    });
+    const data = await post.json();
+    console.log(data);
 
     setFullName('');
     setTopic('');
@@ -59,32 +70,44 @@ function Form() {
         <label>Full Name</label>
         <input
           type="text"
+          placeholder="Bob Smith"
           required
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
         ></input>
-        <label>Topic</label>
+        <label>What topics are you teaching?</label>
         <input
           type="text"
+          placeholder="e.g. CSS and flexbox"
           required
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
         ></input>
-        <label>Describe and notes(about the session and about you)</label>
-        <textarea
+        <label>Give a brief description about yourself</label>
+        <input
+          type="text"
+          placeholder="I like reading and building stuff"
           required
           value={describe}
           onChange={(e) => setDescribe(e.target.value)}
-        ></textarea>
+        ></input>
         <label>Meeting Link</label>
         <input
           type="text"
+          placeholder="www.zoom.com"
           required
           value={meetingLink}
           onChange={(e) => setMeetingLink(e.target.value)}
         ></input>
+        <label>Paypal Email</label>
+        <input
+          type="text"
+          placeholder="www.paypal.com"
+          required
+          value={paypalLink}
+          onChange={(e) => setPaypalLink(e.target.value)}
+        ></input>
         <label>Choose a date and time for your session</label>
-
         <input
           type="datetime-local"
           value={sessionTime}
@@ -102,7 +125,9 @@ function Form() {
           <option value="90 minutes">90 minutes</option>
           <option value="more than 90 minutes">more than 90 minutes</option>
         </select>
-        <button onClick={submitForm}>Submit</button>
+        <button className="submit" onClick={submitForm}>
+          Submit
+        </button>
         <button onClick={clearForm}>Clear</button>
       </form>
       {/* <p>{sessionTime}</p>

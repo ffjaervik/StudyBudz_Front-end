@@ -11,14 +11,15 @@ function App() {
 
   //Hook that fetches data for the initail render
   useEffect(() => {
-    const url = `http://localhost:8000/Lesson`;
+    const url = `https://studybudzapp.herokuapp.com/lessons`;
 
     const fetchData = async () => {
       try {
         const response = await fetch(url);
         const LessonData = await response.json();
 
-        setInitialData(LessonData);
+        setInitialData(LessonData.payload);
+        console.log(LessonData.payload);
         console.log(LessonData);
         console.log(initialData);
       } catch (error) {

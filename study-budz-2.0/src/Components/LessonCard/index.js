@@ -11,23 +11,23 @@ const LessonCard = ({ lesson }) => {
       </div>
       <div className="card-stuff">
         <p>
-          <strong>Name: </strong> {lesson.fullName}
+          <strong>Name: </strong> {lesson.name}
         </p>
         <p>
           <strong>About me: </strong>
-          {lesson.describe}
+          {lesson.description}
         </p>
         <p>
           <strong>Session date and time: </strong>
-          {lesson.sessionTime}
+          {lesson.datetime}
         </p>
         <p>
           <strong>Session length: </strong>
-          {lesson.meetingLength}
+          {lesson.duration}
         </p>
         <p>
           <strong>Meeting link: </strong>
-          {lesson.meetingLink}
+          {lesson.zoom}
         </p>
       </div>
     </div>
