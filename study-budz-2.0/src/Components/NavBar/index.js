@@ -20,7 +20,7 @@ function Navbar() {
             <Link to="/how-to-work-together">How to work together</Link>
           </p>
           <button>
-            <a href="/">How to turn on a computer</a>
+          <a href="https://www.youtube.com/watch?v=gMwQ3-WEl6o">How to turn on a computer</a>
           </button>
         </div>
       </nav>
