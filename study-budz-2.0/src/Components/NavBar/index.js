@@ -1,5 +1,5 @@
 import './Navbar.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -20,7 +20,13 @@ function Navbar() {
             <Link to="/how-to-work-together">How to work together</Link>
           </p>
           <button>
-          <a href="https://www.youtube.com/watch?v=gMwQ3-WEl6o">How to turn on a computer</a>
+            <a
+              href="https://www.youtube.com/watch?v=gMwQ3-WEl6o"
+              target="_blank"
+              rel="noreferrer"
+            >
+              How to turn on a computer
+            </a>
           </button>
         </div>
       </nav>
