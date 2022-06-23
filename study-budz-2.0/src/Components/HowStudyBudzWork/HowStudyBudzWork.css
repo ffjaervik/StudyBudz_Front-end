@@ -1,0 +1,21 @@
+.teacher-card-container {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 8px;
+  gap: 30px;
+  height: 700px;
+  padding: 20px;
+}
+.card-pic {
+  width: 60%;
+  height: 100%;
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  max-height: 700%;
+}
+.info-container h2 {
+  margin: 0;
+}

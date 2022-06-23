@@ -39,7 +39,9 @@ function App() {
       <div>
         <Navbar />
         <div className="App">
-          <h1>StudyBudz</h1>
+          <div className="logo-container">
+            <img src={studyBudz} alt="logo" />
+          </div>
           <Switch>
             <Route exact path="/">
               <div className="main">
