@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './lesson-card.css';
 
 const LessonCard = ({ lesson }) => {
-  const [attendance, setAttendance] = useState(null);
+  const [attendance, setAttendance] = useState('');
 
   function sendAttendanceList() {
     setAttendance('');

@@ -1,4 +1,4 @@
-import KazeemCard from '../../pictures/KazimPortfolioLatest.png';
+import KazeemCard from '../../pictures/Kazeem alatishe- clear.png';
 import './HowStudyBudzWork.css';
 const HowStudyBudzWork = () => {
   return (

@@ -45,7 +45,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <div className="main">
-                {initialData && <LessonContainer lessons={initialData} />}
+                {initialData && (
+                  <LessonContainer key={initialData.id} lessons={initialData} />
+                )}
                 <Form />
               </div>
             </Route>
