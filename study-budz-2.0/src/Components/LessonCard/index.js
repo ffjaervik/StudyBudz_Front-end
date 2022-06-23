@@ -22,7 +22,7 @@ const LessonCard = ({ lesson }) => {
           <strong>Name: </strong> {lesson.name}
         </p>
         <p>
-          <strong>About me: </strong>
+          <strong>Lesson description: </strong>
           {lesson.description}
         </p>
         <p>
