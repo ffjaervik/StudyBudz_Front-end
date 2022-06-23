@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import studyBudz from '../../pictures/studyBudz logo.png';
 import Form from '../Form/index';
 // import LessonCard from '../LessonCard';
 import LessonContainer from '../LessonContainer';
@@ -34,7 +35,9 @@ function App() {
     <div>
       <Navbar />
       <div className="App">
-        <h1>StudyBudz</h1>
+        <div className="logo-container">
+          <img src={studyBudz} alt="logo" />
+        </div>
         <div className="main">
           {initialData && <LessonContainer lessons={initialData} />}
           <Form />

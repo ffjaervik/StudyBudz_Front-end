@@ -13,3 +13,8 @@ h1 {
   font-size: 2.2rem;
   color: #1d3557;
 }
+
+.logo-container {
+  text-align: center;
+  margin: 15px 0px;
+}
