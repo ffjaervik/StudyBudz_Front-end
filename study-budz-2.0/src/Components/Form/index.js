@@ -45,6 +45,13 @@ function Form() {
 
   function clearForm(e) {
     e.preventDefault();
+    setDateTime('');
+    setName('');
+    setDescription('');
+    setPaypalEmail('');
+    setTimeDuration('');
+    setTopic('');
+    setZoom('');
   }
 
   return (
@@ -67,10 +74,10 @@ function Form() {
           value={topic}
           onChange={(e) => setTopic(e.target.value)}
         ></input>
-        <label>Give a brief description about yourself</label>
+        <label>More info on your session</label>
         <input
           type="text"
-          placeholder="I like reading and building stuff"
+          placeholder="e.g. How to write semantic HTML"
           required
           value={description}
           onChange={(e) => setDescription(e.target.value)}
@@ -83,16 +90,16 @@ function Form() {
           value={zoom}
           onChange={(e) => setZoom(e.target.value)}
         ></input>
-        <label>Paypal Email</label>
+        <label>Paypal Email (optional)</label>
         <input
           type="text"
           placeholder="www.paypal.com"
-          required
           value={paypalemail}
           onChange={(e) => setPaypalEmail(e.target.value)}
         ></input>
         <label>Choose a date and time for your session</label>
         <input
+          required
           type="datetime-local"
           value={datetime}
           min="2022-07-21T00:00"
