@@ -3,30 +3,57 @@ import './HowStudyBudzWork.css';
 const HowStudyBudzWork = () => {
   return (
     <div className="how-study-budz-work">
-      <h1>How StudyBudz works</h1>
-      <p>
-        {' '}
-        We Promote a culture of respect and honesty amongs our Study Budz. We
-        want everyone to feel they are in a confotable zone where learning is
-        promoted amongs the peers
-      </p>
-      <p>At StudyBudz we want to reward contributions</p>
+      <div className="text-container">
+        <h1>How StudyBudz works</h1>
+        <p>
+          {' '}
+          We Promote a culture of respect and honesty amongst our Study Budz. We
+          want everyone to feel they are in a confortable zone where learning is
+          promoted amongs their peers.
+        </p>
+        <p>
+          At StudyBudz we want to reward contributions, se have set up a badge
+          stytem that rewards users for their contributions and efforts
+        </p>
+        <p>Below is a example of a users personal profile page. </p>
+      </div>
       <div className="teacher-card-container">
         <img className="card-pic" src={KazeemCard} alt="badges example" />
         <div className="info-container">
-          <h2>Sessions</h2>
-          <p>You have completed 23 sessions</p>
-          <h2>Feedback</h2>
-          <p>Mary: So helpful, thank you so much!</p>
-          <p>Mary: So helpful, thank you so much!</p>
-          <p>Mary: So helpful, thank you so much!</p>
+          <h2>Sessions:</h2>
+
+          <p>
+            You have completed <strong>23</strong> sessions
+          </p>
+          <h2>Feedback:</h2>
+          <p>
+            <strong>Mary:</strong> So helpful, thank you so much!
+          </p>
+          <p>
+            {' '}
+            <strong>Bob:</strong> Learned so much. Amazing!
+          </p>
+          <p>
+            {' '}
+            <strong>Louise:</strong> Kazeem is so patient and friendly.
+          </p>
+
           <button>Click to see all feedback</button>
-          <h2>Missed Sessions</h2>
-          <p> You have missed 0 session! Keep up the good work!</p>
-          <h2>Duration</h2>
-          <p> You have taught for 2202 minutes so far!</p>
-          <h2>Total sessions</h2>
-          <p> You have taught 35 sessions so far!</p>
+          <h2>Missed Sessions:</h2>
+          <p>
+            {' '}
+            You have missed <strong>0</strong> session!{' '}
+          </p>
+          <h2>Duration:</h2>
+          <p>
+            {' '}
+            You have taught for <strong>2202 minutes </strong> so far!{' '}
+          </p>
+          <h2>Total sessions:</h2>
+          <p>
+            {' '}
+            You have taught <strong>35</strong> sessions so far!
+          </p>
         </div>
       </div>
     </div>
