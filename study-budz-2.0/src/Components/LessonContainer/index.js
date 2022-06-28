@@ -1,6 +1,8 @@
 import LessonCard from '../LessonCard';
 import './lesson-container.css';
 
+// This component is responsible for loading the LessonCard component and 
+// mapping through any additional LessonCard that is added to the DB through the Form Component
 const LessonContainer = ({ lessons }) => {
   return (
     <div>

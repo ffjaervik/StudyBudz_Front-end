@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Form.css';
 
+// Form component with states that matching the required key/value pairs on the database
 function Form() {
   const [name, setName] = useState('');
   const [topic, setTopic] = useState('');
@@ -18,11 +19,12 @@ function Form() {
   // location: 'location',
   // intrests: 'interest',
 
+// This function will create a post request after the user clicks the submit button rendered on the Form component
   async function submitForm(e) {
     // e.preventDefault();
     const duration = Number(timeduration);
 
-    const studySession = {
+    const studySession = {  //object containing the states that will be pushed to the DB on a POST request
       name,
       topic,
       description,
@@ -43,6 +45,7 @@ function Form() {
     console.log(data);
   }
 
+  // clearing the Form input fields back to an empty string after submit 
   function clearForm(e) {
     e.preventDefault();
     setDateTime('');

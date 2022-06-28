@@ -1,6 +1,7 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
+// Custom Navigation Component that contains the Links for the components: HowStudyBudzWork & HowToWorkTogether
 function Navbar() {
   return (
     <div className="fixed">

@@ -1,5 +1,7 @@
 import KazeemCard from '../../pictures/Kazeem alatishe- clear.png';
 import './HowStudyBudzWork.css';
+
+//Component containing the HowStudyBudzWork component and is found on the Navbar at "how StudyBudz works"
 const HowStudyBudzWork = () => {
   return (
     <div className="how-study-budz-work">

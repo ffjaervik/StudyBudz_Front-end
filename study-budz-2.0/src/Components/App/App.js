@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import studyBudz from '../../pictures/studyBudz logo.png';
 import Form from '../Form/index';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import LessonCard from '../LessonCard';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //React Routing
 import LessonContainer from '../LessonContainer';
 import Navbar from '../NavBar/index.js';
 import HowStudyBudzWork from '../HowStudyBudzWork';

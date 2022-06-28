@@ -1,4 +1,6 @@
 import './HowToCss.css';
+
+//Placeholder component that will be changed later on the project. Right now it is holding "dummy elements" which will be removed when the project is finished
 const HowToWorkTogether = () => {
   return (
     <>

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './lesson-card.css';
 
+// This component is used to display the lesson on the LessonContainer Component. 
+// It will catch the data from the db after the user submits the form.
 const LessonCard = ({ lesson }) => {
   const [attendance, setAttendance] = useState('');
 
