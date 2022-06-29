@@ -163,14 +163,6 @@ Although we achieved our MVP goals, we only had 4 days to plan, design and make 
 - Login using Auth0/JWT.
 - Cypress end-to-end testing.
 
-## Feedback
-
-If you have any feedback, please reach out to us at any of these emails:
-
-- kieran.webdevelopment@gmail.com
-- jadenjoel76@gmail.com
-- fabianfjaervik@gmail.com
-- hello@99daycoder.com
 
 
 
