@@ -1,7 +1,8 @@
-import Form from './Form.test.js'
+import Form from './index.js'
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import userEvent from "@testing-library/user-event";
+import {test, expect, jest} from '@jest/globals';
 
 
 
@@ -40,6 +41,23 @@ test('h2 tag has "Offer a Study Session" as text', () => {
     }
     );
 
-
+    test ("ClearButton handleClick", function () {
+        const submitForm = jest.fn()
+    //ARRANGE:
+    // Render the Form + pass it the props that it needs
+        render(<Form onClick={submitForm}/>);
+        
+    //ACT:
+        //Click the button
+        //How do we click something in out test?
+        //How do we select the button?
+    const button = screen.getByText('Submit');
+    userEvent.click(button)
+    
+    //ASSERT:
+    //Assert that the handlecClick props was called
+    expect(submitForm).toHaveBeenCalled()
+    });
+    
     
 
