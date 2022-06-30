@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import './Form.css';
 
-// Form component with states that matching the required key/value pairs on the database
 function Form() {
   const [name, setName] = useState('');
   const [topic, setTopic] = useState('');
   const [description, setDescription] = useState('');
-  const [zoom, setZoom] = useState('');
+  const [zoom, setZoom] = useState('https://');
   const [timeduration, setTimeDuration] = useState('');
   const [datetime, setDateTime] = useState('');
   const [paypalemail, setPaypalEmail] = useState('');
@@ -19,12 +18,11 @@ function Form() {
   // location: 'location',
   // intrests: 'interest',
 
-// This function will create a post request after the user clicks the submit button rendered on the Form component
   async function submitForm(e) {
     // e.preventDefault();
     const duration = Number(timeduration);
 
-    const studySession = {  //object containing the states that will be pushed to the DB on a POST request
+    const studySession = {
       name,
       topic,
       description,
@@ -45,7 +43,6 @@ function Form() {
     console.log(data);
   }
 
-  // clearing the Form input fields back to an empty string after submit 
   function clearForm(e) {
     e.preventDefault();
     setDateTime('');
@@ -59,7 +56,7 @@ function Form() {
 
   return (
     <div className="form-container">
-      <form className="form-items-container">
+      <form onSubmit={submitForm} className="form-items-container">
         <h2>Offer a Study Session</h2>
         <label>Full Name</label>
         <input
@@ -87,15 +84,15 @@ function Form() {
         ></input>
         <label>Meeting Link</label>
         <input
-          type="text"
-          placeholder="www.zoom.com"
+          type="url"
+          placeholder="https://example.com"
           required
           value={zoom}
           onChange={(e) => setZoom(e.target.value)}
         ></input>
         <label>Paypal Email (optional)</label>
         <input
-          type="text"
+          type="email"
           placeholder="www.paypal.com"
           value={paypalemail}
           onChange={(e) => setPaypalEmail(e.target.value)}
@@ -105,7 +102,7 @@ function Form() {
           required
           type="datetime-local"
           value={datetime}
-          min="2022-07-21T00:00"
+          min="2022-07-28T00:00"
           max="2023-07-21T00:00"
           onChange={(e) => setDateTime(e.target.value)}
         ></input>
@@ -119,9 +116,7 @@ function Form() {
           <option value="90">90 minutes</option>
           <option value="120">more than 90 minutes</option>
         </select>
-        <button className="submit" onClick={submitForm}>
-          Submit
-        </button>
+        <button className="submit">Submit</button>
         <button className="clear" onClick={clearForm}>
           Clear
         </button>
