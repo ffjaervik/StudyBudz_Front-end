@@ -17,7 +17,7 @@ function App() {
 
   //Hook that fetches data for the initail render
   useEffect(() => {
-    const url = `https://studybudzapp.herokuapp.com/lessons`;
+    const url = `https://study-budz.herokuapp.com/lessons`;
 
     const fetchData = async () => {
       try {
